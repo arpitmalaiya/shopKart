@@ -1,0 +1,14 @@
+<div class="card mb-3" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ product.productName }}</h5>
+      <p class="card-text">Id: {{ product.productId }}</p>
+      <p class="card-text">Article: {{ product.productSKU }}</p>
+      <p class="card-text">Rs. {{ product.productPrice }}</p>
+      <p class="card-text">Left : {{ product.availableQty }}</p>
+      <div class="btn-group">
+        <button (click)="addtToCart()" class="btn btn-primary">Add to Cart</button>
+        <button (click)="editItem()" class="btn btn-secondary">Edit</button>
+        <button (click)="deleteItem()" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>

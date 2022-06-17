@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+  <div class="container">
+    <a class="navbar-brand" href="#">ShopKart</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#see">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="see">
+      <ul class="navbar-nav ml-auto">
+        <li
+          routerLinkActive="active current"
+          class="nav-item"
+          *ngIf="isAuthenticated"
+        >
+          <a class="nav-link" routerLink="/recipes">Products</a>
+        </li>
+        <li *ngIf="isAuthenticated" routerLinkActive="active current" routerLink="/shoppingCart" class="nav-item">
+          <a class="nav-link">Shopping List</a>
+        </li>
+
+        <li
+          routerLinkActive="active current"
+          class="nav-item"
+          *ngIf="isAuthenticated"
+        >
+          <a class="nav-link" (click)="onLogout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
